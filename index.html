@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Regalo Especial para Ti</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de bienvenida -->
+        <div class="welcome-message" id="welcome-message">
+            <h1>¡Hola my love!</h1>
+            <p>Mi amor eres una hermosa rosa, por muchas espinas que tenga no me importa darte un beso y termine lleno de sangre.
+
+                Pprque en el instante que dije que me gustabas estaba preparado para hacer muchas cosas por ti, pues darte regalos no es una opcion, tampoco una obligacion, es mi lenguaje de amor. Mi form de expresarme hacia ti, no te doy regalos solo porque te los quiera dar, te los doy porque la vdd regalarte esos mini presentes me hace demasiado feliz.
+                
+                Que digas que te parecen bonitos solo me motiva a darte mas.
+                
+                Porque esos regalos son pequeñas muestras de lo que siento por ti, cada momento del dia.
+                
+                Esos regalos son mi forma no textual de decirte </p>
+                <h2>PORQUE TE AMO MUCHO</h2>
+            <button id="show-more">Ver más</button>
+        </div>
+
+        <!-- Sección de contenido oculto que se muestra al hacer clic en "Ver más" -->
+        <div class="hidden-content" id="additional-content">
+            <h2>Recuerdos Especiales</h2>
+            <p>Aquí hay algunos momentos que hemos compartido juntos:</p>
+
+            <!-- Galería de Imágenes -->
+            <div class="gallery">
+                <img src="./img/1.jpg" alt="Recuerdo 1">
+                <img src="./img/2.jpg" alt="Recuerdo 2">
+                <img src="./img/3.jpg" alt="Recuerdo 3">
+                <img src="./img/4.jpg" alt="Recuerdo 4">
+                <img src="./img/5 (1).png" alt="Recuerdo 5">
+                <img src="./img/6.png" alt="Recuerdo 6">
+                <img src="./img/7.png" alt="Recuerdo 7">
+            </div>
+
+            <!-- Contenedor del overlay -->
+<div class="overlay" id="overlay">
+    <img src="" alt="Ampliar imagen" id="overlay-image">
+</div>
+
+
+            <!-- Mensaje de Video -->
+            <h3>Un Mensaje para Ti</h3>
+            <!-- Área de Texto para Mensaje Personal -->
+            <div class="message-text">
+                <p>Allison, eres una persona muy importante para mí. Si no me crees, piensa en todo lo que he hecho por ti y en lo que estoy haciendo en este preciso momento. Nicole, eres alguien que aprecio muchísimo porque me has hecho muy feliz y me has enseñado mucho sobre gustos musicales y otras cosas. Incluso tenemos casi los mismos temas de conversación y debate, porque eres una auténtica amiga, Allison, y una muy buena. Quien diga lo contrario es un bastardo que merece que le metamos un palo por el culo. Pero sobre todo, siempre seguiré amándote, y eso lo sabes muy bien, Allison. Nunca se me pasó por la mente abandonarte; al contrario, solo he pensado en qué hacerte y cómo hacerte feliz.</p>
+                <p>ATT: Juan</p>
+            </div>
+                <div id="button-container">
+                    <a href="./templates/Heart.html" id="special-trigger-1">Te amo</a>
+                    <a href="./templates/flor.html" id="special-trigger-2">Para ti</a>
+                </div>
+            
+                <div class="video-container">
+                    <div class="video-row">
+                        <video controls onmouseover="hideButtons()" onmouseout="checkVideos()">
+                            <source src="./video/System Of A Down - She's Like Heroin [Subs. Español].mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                        <video controls onmouseover="hideButtons()" onmouseout="checkVideos()">
+                            <source src="./video/System Of A Down - Toxicity (Official HD Video)(720P_HD).mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                        <video controls onmouseover="hideButtons()" onmouseout="checkVideos()">
+                            <source src="./video/Rammstein - Te Quiero Puta_ (Official Lyric Video)(720P_HD).mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                    </div>
+                    <div class="video-row">
+                        <video controls onmouseover="hideButtons()" onmouseout="checkVideos()">
+                            <source src="./video/La chica yeyé(720P_HD).mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                        <video controls onmouseover="hideButtons()" onmouseout="checkVideos()">
+                            <source src="./video/Y2meta.app-Floricienta — Flores Amarillas [Letra].mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                        <video controls onmouseover="hideButtons()" onmouseout="checkVideos()">
+                            <source src="./video/DECO_27 _ Rabbit Hole (ft. Hatsune Miku) - (Sub. Español)(720P_HD).mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                    </div>
+                </div>
+                
+            
+            
+            
+            
+            
+            
+          
+        </div>
+
+    <script>
+        document.getElementById('show-more').addEventListener('click', function() {
+            const welcomeMessage = document.getElementById('welcome-message');
+            const additionalContent = document.getElementById('additional-content');
+            
+            if (additionalContent.classList.contains('show')) {
+                welcomeMessage.classList.remove('hide');
+                additionalContent.classList.remove('show');
+                this.textContent = 'Ver más';
+            } else {
+                welcomeMessage.classList.add('hide');
+                additionalContent.classList.add('show');
+                this.textContent = 'Ver menos';
+            }
+        });
+    
+// Obtener todos los elementos de imagen en la galería
+const galleryImages = document.querySelectorAll('.gallery img');
+const overlay = document.getElementById('overlay');
+const overlayImage = document.getElementById('overlay-image');
+
+// Añadir un evento click a cada imagen de la galería
+galleryImages.forEach(img => {
+    img.addEventListener('click', function() {
+        overlay.style.display = 'flex'; // Mostrar el overlay
+        overlayImage.src = this.src; // Establecer la fuente de la imagen en el overlay
+    });
+});
+
+// Añadir un evento click al overlay para ocultarlo
+overlay.addEventListener('click', function() {
+    overlay.style.display = 'none'; // Ocultar el overlay
+});
+
+
+    </script>
+    
+
+
+</body>
+</html>
