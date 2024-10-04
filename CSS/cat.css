@@ -26,7 +26,6 @@ h1 {
     z-index: 10; /* Asegúrate de que el texto esté en frente */
 }
 
-
 @media (min-width: 1200px) {
     h1 {
         font-size: 60px;
@@ -42,7 +41,6 @@ h1 {
     pointer-events: none; /* Para que no interfiera con el canvas */
     z-index: 1; /* Z-index más bajo para las imágenes de los gatos */
 }
-
 
 .cat {
     position: absolute;
