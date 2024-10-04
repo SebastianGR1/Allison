@@ -114,7 +114,7 @@ function addCats() {
         cat.style.top = newY + "px"; // Establecer la posición vertical
 
         // Duración aleatoria de la animación
-        cat.style.animationDuration = (Math.random() * 10 + 5) + "s"; // Entre 20s y 40s
+        cat.style.animationDuration = (Math.random() * 10 + 10) + "s"; // Entre 20s y 40s
         document.querySelector(".cats").appendChild(cat);
     }
 }
