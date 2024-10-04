@@ -141,7 +141,7 @@ video {
 }
 
 /* Estilo para botones */
-button, .response-button, #special-trigger, #special-trigger-1, #special-trigger-2 {
+button, .response-button, #special-trigger-1, #special-trigger-2, #special-trigger-3 {
     background-color: #ffcc00;
     border: none;
     color: #fff;
@@ -155,9 +155,10 @@ button, .response-button, #special-trigger, #special-trigger-1, #special-trigger
     transition: background-color 0.3s ease;
 }
 
-button:hover, .response-button:hover, #special-trigger:hover, #special-trigger-1:hover, #special-trigger-2:hover {
+button:hover, .response-button:hover, #special-trigger-1:hover, #special-trigger-2:hover, #special-trigger-3:hover {
     background-color: #ff9900;
 }
+
 
 /* Estilo para el contenedor de botones */
 #button-container {
