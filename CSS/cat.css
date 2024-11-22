@@ -1,0 +1,55 @@
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+.flash {
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+h1 {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 30px; /* Tamaño de fuente más pequeño para móviles */
+    color: #c70012;
+    padding: 0 20px;
+    z-index: 10; /* Asegúrate de que el texto esté en frente */
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+
+.cats {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que no interfiera con el canvas */
+    z-index: 1; /* Z-index más bajo para las imágenes de los gatos */
+}
+
+.cat {
+    position: absolute;
+    width: 50px; /* Tamaño base, puedes modificarlo en el JS */
+    height: auto;
+    animation: moveCat linear infinite; /* Velocidad de movimiento */
+}
+
+@keyframes moveCat {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100vw); }
+}

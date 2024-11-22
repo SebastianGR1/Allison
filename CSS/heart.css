@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222f3e;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.heart {
+    position: relative;
+    width: 200px; /* Tamaño aumentado */
+    height: 200px; /* Tamaño aumentado */
+    background: #ff4757;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #ff4757;
+    animation: animate .6s linear infinite;
+    display: flex; /* Añadido */
+    justify-content: center; /* Añadido */
+    align-items: center; /* Añadido */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Estilo del texto */
+    text-align: center; /* Centrar texto */
+    padding: 10px; /* Espaciado interno */
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+}
+
+.heart::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 200px; /* Tamaño aumentado */
+    height: 200px; /* Tamaño aumentado */
+    background: #ff4757;
+    border-radius: 50%;
+    box-shadow: -10px 10px 90px #ff4757;
+}
+
+.heart::after {
+    content: '';
+    position: absolute;
+    right: -50%;
+    width: 200px; /* Tamaño aumentado */
+    height: 200px; /* Tamaño aumentado */
+    background: #ff4757;
+    border-radius: 50%;
+    box-shadow: 10px 10px 90px #ff4757;
+}
+
+.contenido{
+    position: fixed;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+h1{color: white;}
+h2{color: white;}

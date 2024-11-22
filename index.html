@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Regalo Especial para Ti</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de bienvenida -->
+        <div class="welcome-message" id="welcome-message">
+            <h1>¡Hola my love!</h1>
+            <p>Hoy 22 De Noviembre te Hago otra actualizacion de esta loca pagina que lleva tu hermoso nombre plasmado en mi mente, Y como hoy es tu Happy Birthday te dare un hermoso pastel para veas lo mucho que te amo</p>
+                <h2>Felix Cumpleaños</h2>
+            <button id="show-more">Ver más</button>
+        </div>
+
+        <!-- Sección de contenido oculto que se muestra al hacer clic en "Ver más" -->
+        <div class="hidden-content" id="additional-content">
+
+            <!--<h2>Recuerdos Especiales</h2>
+            <p>Aquí hay algunos momentos que hemos compartido juntos:</p>
+        -->
+            <!-- Galería de Imágenes -->
+            <!--<div class="gallery">
+                <img src="./img/1.jpg" alt="Recuerdo 1">
+                <img src="./img/2.jpg" alt="Recuerdo 2">
+                <img src="./img/3.jpg" alt="Recuerdo 3">
+                <img src="./img/4.jpg" alt="Recuerdo 4">
+                <img src="./img/5 (1).png" alt="Recuerdo 5">
+                <img src="./img/6.png" alt="Recuerdo 6">
+                <img src="./img/7.png" alt="Recuerdo 7">
+            </div> -->
+
+            <!-- Contenedor del overlay -->
+<div class="overlay" id="overlay">
+    <img src="" alt="Ampliar imagen" id="overlay-image">
+</div>
+
+
+            <!-- Mensaje de Video -->
+            <h3>Un Mensaje para Ti</h3>
+            <!-- Área de Texto para Mensaje Personal -->
+            <div class="message-text">
+                <h2>Feliz Cumpleaños Cariño, Te quiero mucho que te regalo todo esto</h2>
+                <p>me gustaria decirte que aun suene raro o cursi, Tu eres la chica que aviva mi corazon con tu mensajes..</p>
+                <p>Hace unos cuantos dias no te escriba porque te estabas ocupada y pense que podriamos seguir porque no habia mucha comunicacion </p>
+                <p>pero cuando me llamaste "Amor" senti bonito y me puse a pensar lo hipocrita que soy como para necesitar de que me des atencion constante para seguir amandote</p>
+                <p>Asi que me dije a mi mismo, "Deja de ser niño y comportate".. Te amo cariño y por eso quise hacerte feliz haciendote esta pagina, y apesar que no he actualizado casi nada, Intento compensarlo haciendote este poema y expresarte lo mucho que te amo</p>
+                <P>Porque en verdad te amo y quiero que seas muy feliz, Por ello siempre te doy tu merecido espacio de mis insistentes mensajes que te hago, para que no tengas a un tipo loco jodiendote la vida cada 2 por 3</P>
+                <h2>Te quiero mucho cariño</h2>
+                <h3>Att: Tu loco de centro</h3>
+            </div>
+            <div id="button-container">
+                <a href="./templates/Heart.html" class="response-button" id="special-trigger-1">Te amo</a>
+                <a href="./templates/flor.html" class="response-button" id="special-trigger-2">Para ti</a>
+                <a href="./templates/cora.html" class="response-button" class="response-button" id="special-trigger-3">I LOVE YOU</a>
+                <a href="./templates/Pastelito.html" class="response-button" class="response-button" id="special-trigger-4">Happy Birthday</a>
+            </div>
+            
+            
+
+                
+            
+            
+            
+            
+            
+            
+          
+        </div>
+
+    <script>
+        document.getElementById('show-more').addEventListener('click', function() {
+            const welcomeMessage = document.getElementById('welcome-message');
+            const additionalContent = document.getElementById('additional-content');
+            
+            if (additionalContent.classList.contains('show')) {
+                welcomeMessage.classList.remove('hide');
+                additionalContent.classList.remove('show');
+                this.textContent = 'Ver más';
+            } else {
+                welcomeMessage.classList.add('hide');
+                additionalContent.classList.add('show');
+                this.textContent = 'Ver menos';
+            }
+        });
+    
+// Obtener todos los elementos de imagen en la galería
+const galleryImages = document.querySelectorAll('.gallery img');
+const overlay = document.getElementById('overlay');
+const overlayImage = document.getElementById('overlay-image');
+
+// Añadir un evento click a cada imagen de la galería
+galleryImages.forEach(img => {
+    img.addEventListener('click', function() {
+        overlay.style.display = 'flex'; // Mostrar el overlay
+        overlayImage.src = this.src; // Establecer la fuente de la imagen en el overlay
+    });
+});
+
+// Añadir un evento click al overlay para ocultarlo
+overlay.addEventListener('click', function() {
+    overlay.style.display = 'none'; // Ocultar el overlay
+});
+
+
+    </script>
+    
+
+
+</body>
+</html>
